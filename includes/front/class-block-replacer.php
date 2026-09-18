@@ -4,7 +4,7 @@
  *
  * Replaces the rendered output of the `core/comments` block with the
  * plugin's placeholder when lazy-loading is eligible. The parsed block
- * is stashed in {@see \DuckDev\LazyComments\Cache\BlockCache} so the
+ * is stashed in {@see \FoxeLabs\LazyComments\Cache\BlockCache} so the
  * REST endpoint can re-render the same block on demand without walking
  * the template tree again.
  *
@@ -13,20 +13,20 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Front;
+namespace FoxeLabs\LazyComments\Front;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Cache\BlockCache;
-use DuckDev\LazyComments\Contracts\Replacer;
-use DuckDev\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Cache\BlockCache;
+use FoxeLabs\LazyComments\Contracts\Replacer;
+use FoxeLabs\LazyComments\Utils\Singleton;
 
 /**
  * Class BlockReplacer
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Front
+ * @package FoxeLabs\LazyComments\Front
  */
 class BlockReplacer extends Singleton implements Replacer {
 

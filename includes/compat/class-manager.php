@@ -14,18 +14,18 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Compat;
+namespace FoxeLabs\LazyComments\Compat;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Utils\Singleton;
 
 /**
  * Class Manager
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Compat
+ * @package FoxeLabs\LazyComments\Compat
  */
 class Manager extends Singleton {
 

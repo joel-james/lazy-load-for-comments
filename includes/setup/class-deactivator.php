@@ -11,7 +11,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Setup;
+namespace FoxeLabs\LazyComments\Setup;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
  * Class Deactivator
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Setup
+ * @package FoxeLabs\LazyComments\Setup
  */
 class Deactivator {
 

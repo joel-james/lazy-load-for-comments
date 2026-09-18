@@ -9,21 +9,21 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Admin;
+namespace FoxeLabs\LazyComments\Admin;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Plugin;
-use DuckDev\LazyComments\Utils\Assets as AssetManifest;
-use DuckDev\LazyComments\Utils\Singleton;
-use DuckDev\LazyComments\Api\Endpoint;
+use FoxeLabs\LazyComments\Plugin;
+use FoxeLabs\LazyComments\Utils\Assets as AssetManifest;
+use FoxeLabs\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Api\Endpoint;
 
 /**
  * Class Assets
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Admin
+ * @package FoxeLabs\LazyComments\Admin
  */
 class Assets extends Singleton {
 

@@ -15,19 +15,19 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Front;
+namespace FoxeLabs\LazyComments\Front;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Contracts\Replacer;
-use DuckDev\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Contracts\Replacer;
+use FoxeLabs\LazyComments\Utils\Singleton;
 
 /**
  * Class TemplateReplacer
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Front
+ * @package FoxeLabs\LazyComments\Front
  */
 class TemplateReplacer extends Singleton implements Replacer {
 
@@ -55,7 +55,7 @@ class TemplateReplacer extends Singleton implements Replacer {
 	/**
 	 * Detach the comments-template filter.
 	 *
-	 * Called by {@see \DuckDev\LazyComments\Services\CommentsRenderer}
+	 * Called by {@see \FoxeLabs\LazyComments\Services\CommentsRenderer}
 	 * before it re-renders the comments inside the REST endpoint, so
 	 * the swap does not intercept that internal render.
 	 *

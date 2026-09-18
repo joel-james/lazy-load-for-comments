@@ -6,27 +6,27 @@
  * script can inject it on demand. The endpoint is intentionally thin:
  * all the heavy lifting (faking the main query, choosing block vs.
  * classic rendering, restoring globals) lives in
- * {@see \DuckDev\LazyComments\Services\CommentsRenderer}.
+ * {@see \FoxeLabs\LazyComments\Services\CommentsRenderer}.
  *
  * @package LazyComments
  */
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Api;
+namespace FoxeLabs\LazyComments\Api;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
 use WP_REST_Request;
 use WP_REST_Response;
-use DuckDev\LazyComments\Services\CommentsRenderer;
+use FoxeLabs\LazyComments\Services\CommentsRenderer;
 
 /**
  * Class Comments
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Api
+ * @package FoxeLabs\LazyComments\Api
  */
 class Comments extends Endpoint {
 

@@ -71,6 +71,8 @@
 			<property name="prefixes" type="array">
 				<element value="lazy_load_for_comments"/>
 				<element value="LLC_"/>
+				<element value="FoxeLabs\LazyComments"/>
+				<!-- Pre-2.1.0 namespace, still resolvable via includes/legacy-aliases.php. -->
 				<element value="DuckDev\LazyComments"/>
 			</property>
 		</properties>

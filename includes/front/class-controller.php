@@ -17,18 +17,18 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Front;
+namespace FoxeLabs\LazyComments\Front;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Utils\Singleton;
 
 /**
  * Class Controller
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Front
+ * @package FoxeLabs\LazyComments\Front
  */
 class Controller extends Singleton {
 

@@ -19,7 +19,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Cache;
+namespace FoxeLabs\LazyComments\Cache;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
  * Class BlockCache
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Cache
+ * @package FoxeLabs\LazyComments\Cache
  */
 class BlockCache {
 

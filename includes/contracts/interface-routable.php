@@ -3,7 +3,7 @@
  * Contract for classes that register REST API routes.
  *
  * Implemented by every concrete REST endpoint (and required by
- * {@see \DuckDev\LazyComments\Api\Endpoint}, which provides the
+ * {@see \FoxeLabs\LazyComments\Api\Endpoint}, which provides the
  * boilerplate hook wiring). The interface keeps the route declaration
  * discoverable at the type level — a class that `implements Routable`
  * is a class that registers one or more REST routes.
@@ -13,7 +13,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Contracts;
+namespace FoxeLabs\LazyComments\Contracts;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
  * Interface Routable
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Contracts
+ * @package FoxeLabs\LazyComments\Contracts
  */
 interface Routable {
 

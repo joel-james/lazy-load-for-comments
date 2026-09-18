@@ -5,7 +5,7 @@ Donate link: https://paypal.me/JoelCJ
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.0.2
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,6 +104,11 @@ The [official documentation](https://docs.foxelabs.com/software/lazy-load-for-co
 
 == Changelog ==
 
+= 2.1.0 =
+
+* Moved the plugin to the Foxe Labs brand. The PHP namespace is now `FoxeLabs\LazyComments\` (was `DuckDev\LazyComments\`) and the Composer package is `foxelabs/lazy-load-for-comments`. The old class names still resolve, so existing add-ons and custom templates keep working — but they are deprecated and will be removed in a future version.
+* No changes to hooks, filters, option names or settings. Nothing to do after updating.
+
 = 2.0.2 =
 
 * Fixed comments failing to load on sites behind a full-page cache (Cloudflare, host-level page caching). The REST nonce embedded in the cached page expired while the page was still being served, and WordPress rejected the request with a 403 before the public endpoint was reached. Logged-out visitors are no longer sent a nonce, and a stale nonce is now retried without the header.
@@ -128,6 +133,10 @@ The [official documentation](https://docs.foxelabs.com/software/lazy-load-for-co
 * Added compatibility for the Divi theme builder.
 
 == Upgrade Notice ==
+
+= 2.1.0 =
+
+Brand move to Foxe Labs. The PHP namespace changed to `FoxeLabs\LazyComments\`, with the old names kept as deprecated aliases. Hooks, filters and settings are unchanged — updating is safe.
 
 = 2.0.2 =
 

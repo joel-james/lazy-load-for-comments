@@ -1,5 +1,5 @@
 {
-    "name": "duckdev/lazy-load-for-comments",
+    "name": "foxelabs/lazy-load-for-comments",
     "description": "Lazy load the default WordPress comments to improve page speed.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",

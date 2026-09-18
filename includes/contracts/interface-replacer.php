@@ -2,8 +2,8 @@
 /**
  * Contract for classes that swap the rendered comments for the placeholder.
  *
- * Two implementations exist today: {@see \DuckDev\LazyComments\Front\TemplateReplacer}
- * for classic themes, and {@see \DuckDev\LazyComments\Front\BlockReplacer}
+ * Two implementations exist today: {@see \FoxeLabs\LazyComments\Front\TemplateReplacer}
+ * for classic themes, and {@see \FoxeLabs\LazyComments\Front\BlockReplacer}
  * for block themes. The interface documents the shared contract — a
  * replacer hooks into WordPress, decides whether the current request
  * is eligible, and (when it is) returns the placeholder markup in
@@ -19,7 +19,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Contracts;
+namespace FoxeLabs\LazyComments\Contracts;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
  * Interface Replacer
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Contracts
+ * @package FoxeLabs\LazyComments\Contracts
  */
 interface Replacer {
 

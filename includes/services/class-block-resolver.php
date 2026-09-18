@@ -19,7 +19,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Services;
+namespace FoxeLabs\LazyComments\Services;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -28,7 +28,7 @@ defined( 'ABSPATH' ) || exit;
  * Class BlockResolver
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Services
+ * @package FoxeLabs\LazyComments\Services
  */
 class BlockResolver {
 

@@ -3,7 +3,7 @@
  * Plugin Name:       Lazy Load for Comments
  * Plugin URI:        https://wordpress.org/plugins/lazy-load-for-comments
  * Description:       Lazy-load the default WordPress comments. Comments are fetched only after the visitor clicks a button or scrolls to the comments area. Works with both classic and block themes.
- * Version:           2.0.2
+ * Version:           2.1.0
  * Author:            Joel James
  * Author URI:        https://foxelabs.com/
  * Donate link:       https://paypal.me/JoelCJ
@@ -59,7 +59,7 @@ if ( version_compare( PHP_VERSION, '7.4', '<' ) ) {
  */
 
 // Plugin version (kept in sync with the `Version:` header above).
-define( 'LLC_VERSION', '2.0.2' );
+define( 'LLC_VERSION', '2.1.0' );
 
 // Absolute path to this bootstrap file.
 define( 'LLC_FILE', __FILE__ );
@@ -105,6 +105,14 @@ if ( ! file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 require_once __DIR__ . '/vendor/autoload.php';
 
 /*
+ * Legacy `DuckDev\LazyComments\*` class aliases.
+ *
+ * Registers an autoloader, so nothing is actually loaded unless some
+ * third-party code references a pre-2.1.0 class name.
+ */
+require_once __DIR__ . '/includes/legacy-aliases.php';
+
+/*
  * Global helper functions.
  *
  * Loaded here (not via Composer's `files` autoload) so the file is
@@ -115,8 +123,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 require_once __DIR__ . '/includes/functions.php';
 
 // Lifecycle hooks — handled by their dedicated classes inside the Setup namespace.
-register_activation_hook( __FILE__, array( 'DuckDev\LazyComments\Setup\Activator', 'run' ) );
-register_deactivation_hook( __FILE__, array( 'DuckDev\LazyComments\Setup\Deactivator', 'run' ) );
+register_activation_hook( __FILE__, array( 'FoxeLabs\LazyComments\Setup\Activator', 'run' ) );
+register_deactivation_hook( __FILE__, array( 'FoxeLabs\LazyComments\Setup\Deactivator', 'run' ) );
 
 /*
  * Boot the plugin once every other plugin has loaded.
@@ -128,6 +136,6 @@ register_deactivation_hook( __FILE__, array( 'DuckDev\LazyComments\Setup\Deactiv
 add_action(
 	'plugins_loaded',
 	function () {
-		DuckDev\LazyComments\Core::instance();
+		FoxeLabs\LazyComments\Core::instance();
 	}
 );

@@ -12,18 +12,18 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Api;
+namespace FoxeLabs\LazyComments\Api;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Contracts\Routable;
+use FoxeLabs\LazyComments\Contracts\Routable;
 
 /**
  * Class Endpoint
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Api
+ * @package FoxeLabs\LazyComments\Api
  */
 abstract class Endpoint implements Routable {
 

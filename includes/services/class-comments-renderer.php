@@ -22,20 +22,20 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Services;
+namespace FoxeLabs\LazyComments\Services;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
 use WP_Query;
-use DuckDev\LazyComments\Cache\BlockCache;
-use DuckDev\LazyComments\Front\Controller as FrontController;
+use FoxeLabs\LazyComments\Cache\BlockCache;
+use FoxeLabs\LazyComments\Front\Controller as FrontController;
 
 /**
  * Class CommentsRenderer
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Services
+ * @package FoxeLabs\LazyComments\Services
  */
 class CommentsRenderer {
 

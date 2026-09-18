@@ -15,7 +15,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Front;
+namespace FoxeLabs\LazyComments\Front;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || exit;
  * Class Renderer
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Front
+ * @package FoxeLabs\LazyComments\Front
  */
 class Renderer {
 

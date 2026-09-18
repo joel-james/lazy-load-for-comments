@@ -10,18 +10,18 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments;
+namespace FoxeLabs\LazyComments;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
-use DuckDev\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Utils\Singleton;
 
 /**
  * Class Settings
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments
+ * @package FoxeLabs\LazyComments
  */
 class Settings extends Singleton {
 

@@ -11,8 +11,8 @@
 
 declare( strict_types = 1 );
 
-use DuckDev\LazyComments\Plugin;
-use DuckDev\LazyComments\Utils\Singleton;
+use FoxeLabs\LazyComments\Plugin;
+use FoxeLabs\LazyComments\Utils\Singleton;
 
 /**
  * Class Test_Plugin
@@ -44,8 +44,8 @@ class Test_Plugin extends WP_UnitTestCase {
 	 * Singletons return the same instance on repeated calls.
 	 */
 	public function test_singleton_returns_same_instance(): void {
-		$first  = \DuckDev\LazyComments\Settings::instance();
-		$second = \DuckDev\LazyComments\Settings::instance();
+		$first  = \FoxeLabs\LazyComments\Settings::instance();
+		$second = \FoxeLabs\LazyComments\Settings::instance();
 
 		$this->assertSame( $first, $second );
 		$this->assertInstanceOf( Singleton::class, $first );
@@ -57,7 +57,7 @@ class Test_Plugin extends WP_UnitTestCase {
 	public function test_global_helper_alias(): void {
 		$this->assertTrue( function_exists( 'lazy_load_for_comments_settings' ) );
 		$this->assertSame(
-			\DuckDev\LazyComments\Settings::instance(),
+			\FoxeLabs\LazyComments\Settings::instance(),
 			lazy_load_for_comments_settings()
 		);
 	}

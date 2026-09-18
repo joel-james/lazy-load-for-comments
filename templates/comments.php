@@ -4,7 +4,7 @@
  *
  * Loaded in place of the theme's `comments.php` when lazy-loading is
  * active. The whole template just outputs the placeholder produced by
- * {@see \DuckDev\LazyComments\Front\Renderer::placeholder()} — the
+ * {@see \FoxeLabs\LazyComments\Front\Renderer::placeholder()} — the
  * actual comments are fetched from the REST API on click or scroll.
  *
  * @package LazyComments
@@ -14,4 +14,4 @@
 defined( 'ABSPATH' ) || exit;
 
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Output is built and escaped inside Renderer::placeholder().
-echo \DuckDev\LazyComments\Front\Renderer::placeholder();
+echo \FoxeLabs\LazyComments\Front\Renderer::placeholder();

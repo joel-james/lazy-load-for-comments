@@ -9,20 +9,20 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Api;
+namespace FoxeLabs\LazyComments\Api;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
 
 use WP_REST_Response;
-use DuckDev\LazyComments\Cache\BlockCache;
-use DuckDev\LazyComments\Utils\Permission;
+use FoxeLabs\LazyComments\Cache\BlockCache;
+use FoxeLabs\LazyComments\Utils\Permission;
 
 /**
  * Class Cache
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Api
+ * @package FoxeLabs\LazyComments\Api
  */
 class Cache extends Endpoint {
 

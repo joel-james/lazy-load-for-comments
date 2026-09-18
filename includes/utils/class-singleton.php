@@ -12,7 +12,7 @@
 
 declare( strict_types = 1 );
 
-namespace DuckDev\LazyComments\Utils;
+namespace FoxeLabs\LazyComments\Utils;
 
 // If this file is called directly, abort.
 defined( 'ABSPATH' ) || exit;
@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || exit;
  * Class Singleton
  *
  * @since   2.0.0
- * @package DuckDev\LazyComments\Utils
+ * @package FoxeLabs\LazyComments\Utils
  */
 abstract class Singleton {
 
