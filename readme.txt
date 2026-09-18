@@ -35,6 +35,7 @@ Version 2.0 is a complete rewrite. It uses the WordPress REST API to fetch the r
 
 * [Plugin website](https://foxelabs.com/software/plugins/lazy-load-for-comments/)
 * [Documentation](https://docs.foxelabs.com/software/lazy-load-for-comments/getting-started)
+* [Changelog](https://docs.foxelabs.com/software/lazy-load-for-comments/changelog)
 * [Support forum](https://wordpress.org/support/plugin/lazy-load-for-comments/)
 
 == Installation ==
@@ -104,6 +105,8 @@ The [official documentation](https://docs.foxelabs.com/software/lazy-load-for-co
 
 == Changelog ==
 
+For the complete release history, see the [full changelog](https://docs.foxelabs.com/software/lazy-load-for-comments/changelog).
+
 = 2.1.0 =
 
 * Moved the plugin to the Foxe Labs brand. The PHP namespace is now `FoxeLabs\LazyComments\` (was `DuckDev\LazyComments\`) and the Composer package is `foxelabs/lazy-load-for-comments`. The old class names still resolve, so existing add-ons and custom templates keep working — but they are deprecated and will be removed in a future version.
@@ -116,21 +119,6 @@ The [official documentation](https://docs.foxelabs.com/software/lazy-load-for-co
 = 2.0.1 =
 
 * Fixed comments not rendering on Genesis and similar classic themes that rely on `comments_template()` populating `comments_by_type`.
-
-= 2.0.0 =
-
-* Complete rewrite using React and the WordPress REST API.
-* Added support for block themes (the core Comments block).
-* New React settings page under *Comments → Lazy Load*.
-* Settings for load method, minimum comment count, button text, button style and loader visibility.
-* Per-post cache of the rendered comments block, with a "Clear comments cache" action in the settings.
-* Crawlers receive the inline comments by default so SEO is preserved.
-* Removed the dependency on jQuery.
-* Existing v1.x load-method setting is migrated automatically on upgrade.
-
-= 1.0.10 =
-
-* Added compatibility for the Divi theme builder.
 
 == Upgrade Notice ==
 
@@ -146,6 +134,3 @@ Fixes comments intermittently failing to load on sites behind Cloudflare or a ho
 
 Fixes comments not displaying on Genesis and other classic themes that depend on `comments_template()` populating `comments_by_type`.
 
-= 2.0.0 =
-
-Major rewrite with React, REST API and block theme support. Your existing load-method setting is migrated automatically — no manual steps required.
