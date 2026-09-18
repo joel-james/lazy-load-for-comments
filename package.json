@@ -5,7 +5,7 @@
   "description": "Lazy load the default WordPress comments on scroll or click to improve page speed.",
   "author": {
     "name": "Joel James",
-    "url": "https://duckdev.com"
+    "url": "https://foxelabs.com"
   },
   "license": "GPL-2.0+",
   "main": "lazy-load-for-comments.php",

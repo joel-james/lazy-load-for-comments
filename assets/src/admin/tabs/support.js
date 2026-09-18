@@ -10,7 +10,7 @@ const SUPPORT_LINKS = [
 	{
 		label: __('Documentation', 'lazy-load-for-comments'),
 		icon: 'admin-page',
-		href: 'https://docs.duckdev.com/lazy-load-for-comments/',
+		href: 'https://docs.foxelabs.com/software/lazy-load-for-comments/getting-started',
 	},
 	{
 		label: __('Support Forums', 'lazy-load-for-comments'),
@@ -20,13 +20,13 @@ const SUPPORT_LINKS = [
 	{
 		label: __('Priority Support', 'lazy-load-for-comments'),
 		icon: 'superhero',
-		href: 'https://duckdev.com/contact/',
+		href: 'https://foxelabs.com/contact/',
 	},
 ]
 
 const AUTHOR_LINKS = [
 	{
-		href: 'https://duckdev.com/about/',
+		href: 'https://foxelabs.com/about/',
 		icon: 'admin-site',
 		label: __('About Us', 'lazy-load-for-comments'),
 	},

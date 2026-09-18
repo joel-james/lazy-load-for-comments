@@ -5,7 +5,7 @@
  * Description:       Lazy-load the default WordPress comments. Comments are fetched only after the visitor clicks a button or scrolls to the comments area. Works with both classic and block themes.
  * Version:           2.0.2
  * Author:            Joel James
- * Author URI:        https://duckdev.com/
+ * Author URI:        https://foxelabs.com/
  * Donate link:       https://paypal.me/JoelCJ
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
