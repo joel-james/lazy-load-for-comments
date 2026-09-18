@@ -17,3 +17,6 @@ node_modules/
 .DS_Store
 *.log
 
+
+# Generated translation template — rebuilt by `npm run pack` on every release.
+/languages/*.pot
