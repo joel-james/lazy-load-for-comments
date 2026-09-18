@@ -5,7 +5,7 @@ Donate link: https://paypal.me/JoelCJ
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,6 +104,10 @@ The [official documentation](https://docs.duckdev.com/lazy-load-for-comments/) c
 
 == Changelog ==
 
+= 2.0.2 =
+
+* Fixed comments failing to load on sites behind a full-page cache (Cloudflare, host-level page caching). The REST nonce embedded in the cached page expired while the page was still being served, and WordPress rejected the request with a 403 before the public endpoint was reached. Logged-out visitors are no longer sent a nonce, and a stale nonce is now retried without the header.
+
 = 2.0.1 =
 
 * Fixed comments not rendering on Genesis and similar classic themes that rely on `comments_template()` populating `comments_by_type`.
@@ -124,6 +128,10 @@ The [official documentation](https://docs.duckdev.com/lazy-load-for-comments/) c
 * Added compatibility for the Divi theme builder.
 
 == Upgrade Notice ==
+
+= 2.0.2 =
+
+Fixes comments intermittently failing to load on sites behind Cloudflare or a host-level full-page cache. Recommended for every cached site.
 
 = 2.0.1 =
 

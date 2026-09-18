@@ -195,18 +195,30 @@ const createLoader = (mount, config) => {
 		renderSpinner()
 
 		try {
-			const headers = { Accept: 'application/json' }
+			const url = `${restUrl}?post_id=${encodeURIComponent(postId)}`
 
-			// Send the REST nonce so the request runs as the current
-			// user — otherwise the form renders as logged-out.
-			if (restNonce) {
-				headers['X-WP-Nonce'] = restNonce
+			const request = (nonce) => {
+				const headers = { Accept: 'application/json' }
+
+				// Send the REST nonce so the request runs as the current
+				// user — otherwise the form renders as logged-out.
+				if (nonce) {
+					headers['X-WP-Nonce'] = nonce
+				}
+
+				return fetch(url, { headers, credentials: 'same-origin' })
 			}
 
-			const response = await fetch(
-				`${restUrl}?post_id=${encodeURIComponent(postId)}`,
-				{ headers, credentials: 'same-origin' },
-			)
+			let response = await request(restNonce)
+
+			// A page served from a full-page cache can carry a nonce that
+			// has since expired, and core rejects a bad X-WP-Nonce with a
+			// 403 before our public permission_callback runs. The endpoint
+			// is public, so retry once without the header rather than
+			// showing an error.
+			if (403 === response.status && restNonce) {
+				response = await request(null)
+			}
 
 			if (!response.ok) {
 				throw new Error('Request failed')

@@ -95,7 +95,14 @@ class Assets extends Singleton {
 			array(
 				'postId'       => get_the_ID(),
 				'restUrl'      => rest_url( Endpoint::NAMESPACE . '/comments' ),
-				'restNonce'    => wp_create_nonce( 'wp_rest' ),
+				// Only logged-in visitors get a nonce. A logged-out nonce
+				// expires after 12-24 hours, but full-page caches (Cloudflare,
+				// host page caches) keep serving the HTML long after that.
+				// Core's `rest_cookie_check_errors()` then rejects the stale
+				// header with a 403 before the public `permission_callback`
+				// ever runs, so the comments never load. The endpoint needs
+				// no nonce for logged-out visitors.
+				'restNonce'    => is_user_logged_in() ? wp_create_nonce( 'wp_rest' ) : '',
 				'method'       => $settings->get( 'load_method', 'scroll' ),
 				'buttonText'   => '' !== $button_text ? $button_text : __( 'Load Comments', 'lazy-load-for-comments' ),
 				'buttonStyle'  => $settings->get( 'button_style', 'theme' ),
